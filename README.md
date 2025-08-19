@@ -136,6 +136,11 @@ Finished, everything is ready, run `npm run build` to see what is built with `vi
    */
   configName?: string
   /**
+   * Default template path when config.json doesn't specify one
+   * @default undefined
+   */
+  defaultTemplate?: string
+  /**
    * Experimental features for plugin, using at your own risk!
    */
   experimental?: {

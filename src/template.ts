@@ -54,9 +54,10 @@ function renderHandlebarsTpl(
 
 export function fetchTemplateHTML(entry: EntryPath, pageConfig: PagePluginConfig) {
     let htmlContent;
+    const templatePath = pageConfig.template || entry.__options.defaultTemplate || "";
     try {
         htmlContent = readFileSync(
-            path.resolve(entry.abs, pageConfig.template || ""),
+            path.resolve(entry.abs, templatePath),
             {
                 encoding: "utf-8",
             }

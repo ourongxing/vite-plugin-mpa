@@ -14,6 +14,7 @@ type EntryPathOption = {
     configName: string;
     templateName: string;
     entryName: string;
+    defaultTemplate?: string;
     sharedData?: object
     renderEngineOption?: object;
 }
@@ -49,6 +50,7 @@ export default class Entries {
                     configName: pluginOption.configName || this.configName,
                     templateName: this.templateName,
                     entryName: this.entryName,
+                    defaultTemplate: pluginOption.defaultTemplate,
                     sharedData: pluginOption.sharedData,
                     renderEngineOption: pluginOption.renderEngineOption,
                 }

@@ -4,6 +4,7 @@ import type Handlebars from 'handlebars'
 export type PluginOption = {
     entryName?: string;                 // default:main.js
     configName?: string;                // default:config.json
+    defaultTemplate?: string;           // default template path when config.json doesn't specify one
     renderEngineOption?: {
         compileOptions?: CompileOptions,
         runtimeOptions?: Handlebars.RuntimeOptions
@@ -15,12 +16,13 @@ export type PluginOption = {
 
 export type ExperimentalPluginOption = {
     customTemplateName?: string;
-    rootEntryDistName?: string; // if an entry is placed at the root folder of vite config's `root`, you can change its name, use "_root" as default. 
+    rootEntryDistName?: string; // if an entry is placed at the root folder of vite config's `root`, you can change its name, use "_root" as default.
 }
 
 export type MergedPluginOption = {
     entryName: string;                 // default:main.js
     configName?: string;
+    defaultTemplate?: string;           // default template path when config.json doesn't specify one
     renderEngineOption?: {
         compileOptions?: CompileOptions,
         runtimeOptions?: Handlebars.RuntimeOptions

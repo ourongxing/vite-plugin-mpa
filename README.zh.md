@@ -135,6 +135,11 @@ export default defineConfig({
    */
   configName?: string
   /**
+   * 当config.json中没有指定template时的默认模板路径
+   * @default undefined
+   */
+  defaultTemplate?: string
+  /**
    * 测试特性，键值可能会在版本更新时有改动，请注意！
    */
   experimental?: {
