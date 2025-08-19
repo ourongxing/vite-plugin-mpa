@@ -1,0 +1,7 @@
+{
+    "template": "../../templates/tpl.html",
+    "data": {
+        "title": "Private Folder - Should be ignored",
+        "description": "This folder starts with underscore and should be skipped"
+    }
+}

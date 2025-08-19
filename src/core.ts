@@ -43,6 +43,10 @@ export default class Entries {
         const files = globSync(globPath, {cwd: rootDir, ignore: 'node_modules/**'});
         for (let i = 0; i < files.length; i++) {
             const dirname = path.dirname(files[i]);
+            // Skip directories that start with underscore
+            if (dirname.split('/').some(part => part.startsWith('_'))) {
+                continue;
+            }
             const fullDirname: EntryPath = {
                 value: dirname,
                 abs: path.resolve(rootDir, dirname),

@@ -27,4 +27,10 @@ describe("Test base function - generate entries", () => {
       return Boolean(entries.entries.find(path => path.value === "subdir"))
     });
   });
+
+  it("should skip folders that start with underscore", () => {
+    expect(entries).toSatisfy((entries: Entries) => {
+      return !Boolean(entries.entries.find(path => path.value === "_private_folder"))
+    });
+  });
 });
