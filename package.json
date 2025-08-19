@@ -1,6 +1,6 @@
 {
   "name": "@ourongxing/vite-plugin-mpa",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A file directory-based automated multi-page Vite plugin that supports HTML templates using Handlebars.",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
